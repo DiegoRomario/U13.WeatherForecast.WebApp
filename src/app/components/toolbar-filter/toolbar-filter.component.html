@@ -1,10 +1,10 @@
 <mat-toolbar color="primary">
     <mat-form-field appearance="outline">
-      <mat-label>Enter some address</mat-label>
+      <mat-label>{{label}}</mat-label>
       <input
         [(ngModel)]="value"
         matInput
-        placeholder="4600 Silver Hill Rd, Washington, DC, 20233"
+        placeholder="{{placeHolder}}"
       />
       <button
         *ngIf="value"
