@@ -1,0 +1,18 @@
+<u13-toolbar-filter
+  (filterEvent)="GetWeatherForecast($event)"
+></u13-toolbar-filter>
+<div class="content">
+  <div fxLayout="row wrap" fxLayoutGap="16px grid">
+    <div
+      [fxFlex]="100 / gridColumns + '%'"
+      fxFlex.xs="100%"
+      fxFlex.sm="33%"
+      fxFlex.md="20%"
+      *ngFor="let item of data"
+    >
+      <u13-weather-forecast-card
+        [weatherForecast]="item"
+      ></u13-weather-forecast-card>
+    </div>
+  </div>
+</div>

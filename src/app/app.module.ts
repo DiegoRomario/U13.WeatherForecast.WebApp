@@ -3,16 +3,32 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { WeatherForecastComponent } from './pages/weather-forecast/weather-forecast.component';
+import { ToolbarFilterComponent } from './components/toolbar-filter/toolbar-filter.component';
+import { WeatherForecastCardComponent } from './components/weather-forecast-card/weather-forecast-card.component';
+import { MaterialModule } from './material/material/material.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    WeatherForecastComponent,
+    ToolbarFilterComponent,
+    WeatherForecastCardComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    FlexLayoutModule,
+    MaterialModule,
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

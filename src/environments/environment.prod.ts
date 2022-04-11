@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  getWeatherForecastByAddressUrl: 'https://localhost:7225/getWeatherForecastByAddress?address='
 };

@@ -1,0 +1,20 @@
+<mat-toolbar color="primary">
+    <mat-form-field appearance="outline">
+      <mat-label>Enter some address</mat-label>
+      <input
+        [(ngModel)]="value"
+        matInput
+        placeholder="4600 Silver Hill Rd, Washington, DC, 20233"
+      />
+      <button
+        *ngIf="value"
+        matSuffix
+        mat-icon-button
+        aria-label="Clear"
+        (click)="search()"
+      >
+        <mat-icon>search</mat-icon>
+      </button>
+    </mat-form-field>
+  </mat-toolbar>
+  
